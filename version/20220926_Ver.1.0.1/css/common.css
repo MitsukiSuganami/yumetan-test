@@ -1,0 +1,191 @@
+/* common */
+* {
+    font-family: 'Segoe UI', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
+
+.button {
+    text-align: center;
+    color: black;
+    border: solid 2px black;
+}
+.button_language {
+    background-color: #7ABCFF;
+}
+.button_language:hover {
+    color: white;
+}
+.button_start {
+    background-color: #FF9E9E;
+}
+.button_start:hover {
+    background-color: #FF7F7F;
+}
+.button_answerCheck {
+    background-color: #FFCE9E;
+}
+.button_answerCheck:hover {
+    background-color: #FFBF7F;
+}
+.button_reload {
+    background-color: #FF9E9E;
+}
+.button_reload:hover {
+    background-color: #FF7F7F;
+}
+
+label.selectItems {
+    display: inline-block;
+}
+label.selectItems input {
+    display: none;
+}
+label.selectItems span {
+    color: white;
+    background-color: lightslategray;
+    border: 2px solid black;
+}
+label.selectItems input:checked + span{
+    color: black;
+    background-color: lightgreen;
+    border: 2px solid green;
+}
+
+.answerCheck {
+    font-weight: 600;
+}
+.answerTrue {
+    color: red;
+}
+.answerFalse {
+    color: blue;
+}
+.answer {
+    color: white;
+}
+.important {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* mobile css */
+@media screen and (min-width: 425px) {
+    /* body {
+        background-color: #FF7F7F;
+    } */
+    h2 {
+        font-size: 48px;
+        margin: 15px 0px;
+    }
+    h3 {
+        font-size: 36px;
+        margin: 24px 0px 0px;
+    }
+    h4 {
+        font-size: 30px;
+        margin: 20px 0px 0px;
+    }
+    p {
+        font-size: 24px;
+        margin: 12px 0px 0px;
+    }
+    .button {
+        font-size: 36px;
+        margin: 30px 0 0;
+        width: 450px;
+        height: 60px;
+    }
+    .input_number {
+        width: 120px;
+        height: 60px;
+        font-size: 40px;
+    }
+    label.selectItems {
+        margin: 24px 9px;
+    }
+    label.selectItems span {
+        font-size: 24px;
+        padding: 15px 30px;
+    }
+}
+
+/* tablet css */
+@media screen and (min-width: 768px){
+    /* body {
+        background-color: aquamarine;
+    } */
+    h2 {
+        font-size: 40px;
+        margin: 15px 0px;
+    }
+    h3 {
+        font-size: 30px;
+        margin: 24px 0px 0px;
+    }
+    h4 {
+        font-size: 24px;
+        margin: 20px 0px 0px;
+    }
+    p {
+        font-size: 20px;
+        margin: 12px 0px 0px;
+    }
+    .button {
+        font-size: 28px;
+        margin: 22px 0 0;
+        width: 350px;
+        height: 45px;
+    }
+    .input_number {
+        width: 100px;
+        height: 50px;
+        font-size: 30px;
+    }
+    label.selectItems {
+        margin: 20px 7px;
+    }
+    label.selectItems span {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+}
+
+/* pc css */
+@media screen and (min-width: 1024px) {
+    /* body {
+        background-color: #FFBF7F;
+    } */
+    h2 {
+        font-size: 36px;
+        margin: 15px 0px;
+    }
+    h3 {
+        font-size: 26px;
+        margin: 16px 0px 0px;
+    }
+    h4 {
+        font-size: 20px;
+        margin: 10px 0px 0px;
+    }
+    p {
+        font-size: 16px;
+        margin: 8px 0px 0px;
+    }
+    .button {
+        font-size: 24px;
+        margin: 20px 0 0;
+        width: 300px;
+        height: 40px;
+    }
+    .input_number {
+        width: 60px;
+        height: 30px;
+        font-size: 20px;
+    }
+    label.selectItems {
+        margin: 15px 5px;
+    }
+    label.selectItems span {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

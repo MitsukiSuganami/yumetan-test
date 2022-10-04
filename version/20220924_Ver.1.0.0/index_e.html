@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Yumetan Words Test (Question Settings)</title>
+        <style>
+            * {
+                font-family: 'Segoe UI', 'Hiragino Kaku Gothic Pro', sans-serif;
+            }
+            h3 {
+                margin: 16px 0px 0px;
+            }
+            h4 {
+                margin: 10px 0px 0px;
+            }
+            p {
+                margin: 8px 0px 0px;
+            }
+            .button {
+                font-size: 24px;
+                margin: 20px 0 0;
+                width: 300px;
+                height: 40px;
+                text-align: center;
+                color: black;
+                border: solid 2px black;
+            }
+            .button_language {
+                background-color: #7ABCFF;
+            }
+            .button_language:hover {
+                color: white;
+            }
+            .button_start {
+                background-color: #FF9E9E;
+            }
+            .button_start:hover {
+                background-color: #FF7F7F;
+            }
+            .input_number {
+                width: 60px;
+                height: 30px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H99M98XJ44"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H99M98XJ44');
+    </script>
+
+    <body>
+        <header>
+            <h2>Yumetan Words Test</h2>
+        </header>
+        <div>
+            <script type="text/javascript">
+                function checkBox1() {
+                    var arr_checkBoxes = document.getElementsByClassName("questionRange");
+                    var count = 0;
+                    for (var i = 0; i < arr_checkBoxes.length; i++) {
+                        if (arr_checkBoxes[i].checked) {
+                            count++;
+                        }
+                    }
+                    if (count > 0) {
+                        // return true;
+                        ;
+                    } else {
+                        window.alert("Please select one or more areas to test.");
+                        return false;
+                    };
+
+                    var arr_checkBoxes = document.getElementsByClassName("questionType");
+                    var count = 0;
+                    for (var i = 0; i < arr_checkBoxes.length; i++) {
+                        if (arr_checkBoxes[i].checked) {
+                            count++;
+                        }
+                    }
+                    if (count > 0) {
+                        return true;
+                    } else {
+                        window.alert("Please select one or more parts of speech to be tested.");
+                        return false;
+                    };
+                }
+            </script>
+            
+            <h3>言語/Language</h3>
+            <button class="button button_language" onclick="location.href='index.html'">日本語</button>
+            <button class="button button_language" onclick="location.href='index_e.html'">English</button>
+
+            <h3>Question Settings</h3>
+            <form action="question_e.php" method="GET">
+                <h4>Question Format</h4>
+                <input type="radio" name="questionLanguage" value="1" checked>Japanese→English
+                <input type="radio" name="questionLanguage" value="2">English→Japanese
+
+                <h4>Question Range (Multiple Selection Possible)</h4>
+                <p>RED Yumetan</p>
+                <input type="checkbox" name="questionRange[]" value="1" class="questionRange">Unit 1
+                <input type="checkbox" name="questionRange[]" value="2" class="questionRange">Unit 2
+                <input type="checkbox" name="questionRange[]" value="3" class="questionRange">Unit 3
+                <input type="checkbox" name="questionRange[]" value="4" class="questionRange">Unit 4
+                <input type="checkbox" name="questionRange[]" value="5" class="questionRange">Unit 5
+                <input type="checkbox" name="questionRange[]" value="6" class="questionRange">Unit 6
+                <input type="checkbox" name="questionRange[]" value="7" class="questionRange">Unit 7
+                <input type="checkbox" name="questionRange[]" value="8" class="questionRange">Unit 8
+                <input type="checkbox" name="questionRange[]" value="9" class="questionRange">Unit 9
+                <input type="checkbox" name="questionRange[]" value="10" class="questionRange">Unit 10
+
+                <p>BLUE Yumetan</p>
+                <input type="checkbox" name="questionRange[]" value="11" class="questionRange">Unit 1
+                <input type="checkbox" name="questionRange[]" value="12" class="questionRange">Unit 2
+                <input type="checkbox" name="questionRange[]" value="13" class="questionRange">Unit 3
+                <input type="checkbox" name="questionRange[]" value="14" class="questionRange">Unit 4
+                <input type="checkbox" name="questionRange[]" value="15" class="questionRange">Unit 5
+                <input type="checkbox" name="questionRange[]" value="16" class="questionRange">Unit 6
+                <input type="checkbox" name="questionRange[]" value="17" class="questionRange">Unit 7
+                <input type="checkbox" name="questionRange[]" value="18" class="questionRange">Unit 8
+                <input type="checkbox" name="questionRange[]" value="19" class="questionRange">Unit 9
+                <input type="checkbox" name="questionRange[]" value="20" class="questionRange">Unit 10
+
+                <h4>Question Part of Speech (Multiple Selection Possible)</h4>
+                <input type="checkbox" name="questionType[]" value="0" class="questionType" checked>Noun
+                <input type="checkbox" name="questionType[]" value="1" class="questionType" checked>Verb
+                <input type="checkbox" name="questionType[]" value="2" class="questionType" checked>Adjective
+
+                <h4>Number of Questions (Default : 20 Questions)</h4>
+                <p>MAX : 100 Questions, MIN : 1 Question</p>
+                <input type="number" name="questionCount" min="1" max="100" value="20" inputmode="numeric" class="input_number">
+                <p>*If the number of words entered in the question is greater than the number of corresponding words on Yumetan, the number of words in the question is automatically adjusted to the number of corresponding words.<br>
+                    Even if the number of words you entered is less than the number of questions, it is not a malfunction or an error.
+                </p>
+                
+                <p><input type="submit" value="Start" class="button button_start" onclick="return checkBox1()"></p>
+            </form></div>
+    </body>
+</html>

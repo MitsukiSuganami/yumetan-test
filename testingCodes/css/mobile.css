@@ -1,0 +1,54 @@
+h3 {
+    margin: 24px 0px 0px;
+}
+h4 {
+    margin: 20px 0px 0px;
+}
+p {
+    margin: 12px 0px 0px;
+}
+.button {
+    font-size: 36px;
+    margin: 30px 0 0;
+    width: 450px;
+    height: 60px;
+    text-align: center;
+    color: black;
+    border: solid 2px black;
+}
+.button_language {
+    background-color: #7ABCFF;
+}
+.button_language:hover {
+    color: white;
+}
+.button_start {
+    background-color: #FF9E9E;
+}
+.button_start:hover {
+    background-color: #FF7F7F;
+}
+.input_number {
+    width: 120px;
+    height: 60px;
+    font-size: 40px;
+}
+label.selectItems {
+    margin: 24px 9px 24px;
+    display: inline-block;
+}
+label.selectItems input {
+    display: none;
+}
+label.selectItems span {
+    color: white;
+    background-color: lightslategray;
+    border: 2px solid black;
+    font-size: 21px;
+    padding: 15px 30px;
+}
+label.selectItems input:checked + span{
+    color: black;
+    background-color: lightgreen;
+    border: 2px solid green;
+}

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Yumetan Words Test (Question)</title>
-        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/common_pc.css">
     </head>
 
     <body>

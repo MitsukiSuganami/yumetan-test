@@ -1,97 +1,126 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>ユメタン単語テスト（設定）</title>
-        <link rel="stylesheet" href="css/common.css">
-    </head>
 
-    <body>
-        <header>
-            <h2>ユメタン単語テスト Ver.1.0.2</h2>
-        </header>
-        <div>
-            <script type="text/javascript">
-                function checkBox1() {
-                    var arr_checkBoxes = document.getElementsByClassName("questionRange");
-                    var count = 0;
-                    for (var i = 0; i < arr_checkBoxes.length; i++) {
-                        if (arr_checkBoxes[i].checked) {
-                            count++;
-                        }
-                    }
-                    if (count > 0) {
-                        // return true;
-                        ;
-                    } else {
-                        window.alert("出題する範囲を1つ以上選択してください。");
-                        return false;
-                    };
+<head>
+    <meta charset="utf-8">
+    <title>ユメタン単語テスト（設定）</title>
+    <link rel="stylesheet" href="css/common-pc.css" media="screan and (min-width:960px)">
+    <link rel="stylesheet" href="css/common-mo.css" media="screan and (max-width:960px)">
+</head>
 
-                    var arr_checkBoxes = document.getElementsByClassName("questionType");
-                    var count = 0;
-                    for (var i = 0; i < arr_checkBoxes.length; i++) {
-                        if (arr_checkBoxes[i].checked) {
-                            count++;
-                        }
+<body>
+    <header>
+        <h2>ユメタン単語テスト Ver.1.0.2</h2>
+    </header>
+    <div>
+        <script type="text/javascript">
+            function checkBox1() {
+                var arr_checkBoxes = document.getElementsByClassName("questionRange");
+                var count = 0;
+                for (var i = 0; i < arr_checkBoxes.length; i++) {
+                    if (arr_checkBoxes[i].checked) {
+                        count++;
                     }
-                    if (count > 0) {
-                        return true;
-                    } else {
-                        window.alert("出題する品詞を1つ以上選択してください。");
-                        return false;
-                    };
                 }
-            </script>
-            
-            <h3>言語/Language</h3>
-            <button class="button button_language" onclick="location.href='index.html'">日本語</button>
-            <button class="button button_language" onclick="location.href='index_e.html'">English</button>
+                if (count > 0) {
+                    // return true;
+                    ;
+                } else {
+                    window.alert("出題する範囲を1つ以上選択してください。");
+                    return false;
+                };
 
-            <h3>出題設定</h3>
-            <form action="question.php" method="GET">
-                <h4>出題形式</h4>
-                <label class="selectItems"><input type="radio" name="questionLanguage" value="1" checked><span>日本語→英語</span></label>
-                <label class="selectItems"><input type="radio" name="questionLanguage" value="2"><span>英語→日本語</span></label>
+                var arr_checkBoxes = document.getElementsByClassName("questionType");
+                var count = 0;
+                for (var i = 0; i < arr_checkBoxes.length; i++) {
+                    if (arr_checkBoxes[i].checked) {
+                        count++;
+                    }
+                }
+                if (count > 0) {
+                    return true;
+                } else {
+                    window.alert("出題する品詞を1つ以上選択してください。");
+                    return false;
+                };
+            }
+        </script>
 
-                <h4>出題範囲（複数選択可）</h4>
-                <p>赤ユメタン</p>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="1" class="questionRange"><span>Unit 1</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="2" class="questionRange"><span>Unit 2</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="3" class="questionRange"><span>Unit 3</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="4" class="questionRange"><span>Unit 4</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="5" class="questionRange"><span>Unit 5</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="6" class="questionRange"><span>Unit 6</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="7" class="questionRange"><span>Unit 7</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="8" class="questionRange"><span>Unit 8</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="9" class="questionRange"><span>Unit 9</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="10" class="questionRange"><span>Unit 10</span></label>
+        <h3>言語/Language</h3>
+        <button class="button button_language" onclick="location.href='index.html'">日本語</button>
+        <button class="button button_language" onclick="location.href='index_e.html'">English</button>
 
-                <p>青ユメタン</p>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="11" class="questionRange"><span>Unit 1</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="12" class="questionRange"><span>Unit 2</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="13" class="questionRange"><span>Unit 3</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="14" class="questionRange"><span>Unit 4</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="15" class="questionRange"><span>Unit 5</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="16" class="questionRange"><span>Unit 6</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="17" class="questionRange"><span>Unit 7</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="18" class="questionRange"><span>Unit 8</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="19" class="questionRange"><span>Unit 9</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionRange[]" value="20" class="questionRange"><span>Unit 10</span></label>
+        <h3>出題設定</h3>
+        <form action="question.php" method="GET">
+            <h4>出題形式</h4>
+            <label class="selectItems"><input type="radio" name="questionLanguage" value="1"
+                    checked><span>日本語→英語</span></label>
+            <label class="selectItems"><input type="radio" name="questionLanguage" value="2"><span>英語→日本語</span></label>
 
-                <h4>出題品詞（複数選択可）</h4>
-                <label class="selectItems"><input type="checkbox" name="questionType[]" value="0" class="questionType" checked><span>名詞</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionType[]" value="1" class="questionType" checked><span>動詞</span></label>
-                <label class="selectItems"><input type="checkbox" name="questionType[]" value="2" class="questionType" checked><span>形容詞</span></label>
+            <h4>出題範囲（複数選択可）</h4>
+            <p>赤ユメタン</p>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="1"
+                    class="questionRange"><span>Unit 1</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="2"
+                    class="questionRange"><span>Unit 2</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="3"
+                    class="questionRange"><span>Unit 3</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="4"
+                    class="questionRange"><span>Unit 4</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="5"
+                    class="questionRange"><span>Unit 5</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="6"
+                    class="questionRange"><span>Unit 6</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="7"
+                    class="questionRange"><span>Unit 7</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="8"
+                    class="questionRange"><span>Unit 8</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="9"
+                    class="questionRange"><span>Unit 9</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="10"
+                    class="questionRange"><span>Unit 10</span></label>
 
-                <h4>出題数（デフォルト：20問）</h4>
-                <p>最大：100問,最小：1問</p>
-                <input type="number" name="questionCount" min="1" max="100" value="20" inputmode="numeric" class="input_number">
-                <p>※入力した出題単語数がユメタン上の該当単語数よりも多かった場合、自動的に該当単語数に出題単語数が調整されます。<br>
+            <p>青ユメタン</p>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="11"
+                    class="questionRange"><span>Unit 1</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="12"
+                    class="questionRange"><span>Unit 2</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="13"
+                    class="questionRange"><span>Unit 3</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="14"
+                    class="questionRange"><span>Unit 4</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="15"
+                    class="questionRange"><span>Unit 5</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="16"
+                    class="questionRange"><span>Unit 6</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="17"
+                    class="questionRange"><span>Unit 7</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="18"
+                    class="questionRange"><span>Unit 8</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="19"
+                    class="questionRange"><span>Unit 9</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="20"
+                    class="questionRange"><span>Unit 10</span></label>
+
+            <h4>出題品詞（複数選択可）</h4>
+            <label class="selectItems"><input type="checkbox" name="questionType[]" value="0" class="questionType"
+                    checked><span>名詞</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionType[]" value="1" class="questionType"
+                    checked><span>動詞</span></label>
+            <label class="selectItems"><input type="checkbox" name="questionType[]" value="2" class="questionType"
+                    checked><span>形容詞</span></label>
+
+            <h4>出題数（デフォルト：20問）</h4>
+            <p>最大：100問,最小：1問</p>
+            <input type="number" name="questionCount" min="1" max="100" value="20" inputmode="numeric"
+                class="input_number">
+            <p>※入力した出題単語数がユメタン上の該当単語数よりも多かった場合、自動的に該当単語数に出題単語数が調整されます。<br>
                 入力した出題単語数が問題数より少なかった場合でも、故障、エラーではありません。
-                </p>
-                
-                <p><input type="submit" value="出題開始" class="button button_start" onclick="return checkBox1()"></p>
-            </form></div>
-    </body>
+            </p>
+
+            <p><input type="submit" value="出題開始" class="button button_start" onclick="return checkBox1()"></p>
+        </form>
+    </div>
+</body>
+
 </html>

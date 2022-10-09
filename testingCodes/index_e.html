@@ -2,129 +2,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Yumetan Words Test (Question Settings)</title>
-    <link rel="stylesheet" href="css/common-pc.css" media="screan and (min-width:960px)">
-    <link rel="stylesheet" href="css/common-mo.css" media="screan and (max-width:960px)">
+        <meta charset="utf-8">
+        <title>Yumetan Words Test (Question Settings)</title>
+        <link rel="stylesheet" href="css/common_pc.css" media="screan and (min-width:961px)">
+        <link rel="stylesheet" href="css/common_mo.css" media="screan and (max-width:960px)">
 </head>
 
 <body>
-    <header>
-        <h2>Yumetan Words Test Ver.1.0.2</h2>
-    </header>
-    <div>
-        <script type="text/javascript">
-            function checkBox1() {
-                var arr_checkBoxes = document.getElementsByClassName("questionRange");
-                var count = 0;
-                for (var i = 0; i < arr_checkBoxes.length; i++) {
-                    if (arr_checkBoxes[i].checked) {
-                        count++;
-                    }
-                }
-                if (count > 0) {
-                    // return true;
-                    ;
-                } else {
-                    window.alert("Please select one or more areas to test.");
-                    return false;
-                };
+        <header>
+                <h2>Yumetan Words Test Ver.1.0.2</h2>
+        </header>
+        <div>
+                <script type="text/javascript">
+                        function checkBox1() {
+                                var arr_checkBoxes = document.getElementsByClassName("questionRange");
+                                var count = 0;
+                                for (var i = 0; i < arr_checkBoxes.length; i++) {
+                                        if (arr_checkBoxes[i].checked) {
+                                                count++;
+                                        }
+                                }
+                                if (count > 0) {
+                                        // return true;
+                                        ;
+                                } else {
+                                        window.alert("Please select one or more areas to test.");
+                                        return false;
+                                };
 
-                var arr_checkBoxes = document.getElementsByClassName("questionType");
-                var count = 0;
-                for (var i = 0; i < arr_checkBoxes.length; i++) {
-                    if (arr_checkBoxes[i].checked) {
-                        count++;
-                    }
-                }
-                if (count > 0) {
-                    return true;
-                } else {
-                    window.alert("Please select one or more parts of speech to be tested.");
-                    return false;
-                };
-            }
-        </script>
+                                var arr_checkBoxes = document.getElementsByClassName("questionType");
+                                var count = 0;
+                                for (var i = 0; i < arr_checkBoxes.length; i++) {
+                                        if (arr_checkBoxes[i].checked) {
+                                                count++;
+                                        }
+                                }
+                                if (count > 0) {
+                                        return true;
+                                } else {
+                                        window.alert("Please select one or more parts of speech to be tested.");
+                                        return false;
+                                };
+                        }
+                </script>
 
-        <h3>言語/Language</h3>
-        <button class="button button_language" onclick="location.href='index.html'">日本語</button>
-        <button class="button button_language" onclick="location.href='index_e.html'">English</button>
+                <h3>言語/Language</h3>
+                <button class="button button_language" onclick="location.href='index.html'">日本語</button>
+                <button class="button button_language" onclick="location.href='index_e.html'">English</button>
 
-        <h3>Question Settings</h3>
-        <form action="question_e.php" method="GET">
-            <h4>Question Format</h4>
-            <label class="selectItems"><input type="radio" name="questionLanguage" value="1"
-                    checked><span>Japanese→English</span></label>
-            <label class="selectItems"><input type="radio" name="questionLanguage"
-                    value="2"><span>English→Japanese</span></label>
+                <h3>Question Settings</h3>
+                <form action="question_e.php" method="GET">
+                        <h4>Question Format</h4>
+                        <label class="selectItems"><input type="radio" name="questionLanguage" value="1"
+                                        checked><span>Japanese→English</span></label>
+                        <label class="selectItems"><input type="radio" name="questionLanguage"
+                                        value="2"><span>English→Japanese</span></label>
 
-            <h4>Question Range (Multiple Selection Possible)</h4>
-            <p>RED Yumetan</p>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="1"
-                    class="questionRange"><span>Unit 1</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="2"
-                    class="questionRange"><span>Unit 2</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="3"
-                    class="questionRange"><span>Unit 3</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="4"
-                    class="questionRange"><span>Unit 4</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="5"
-                    class="questionRange"><span>Unit 5</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="6"
-                    class="questionRange"><span>Unit 6</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="7"
-                    class="questionRange"><span>Unit 7</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="8"
-                    class="questionRange"><span>Unit 8</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="9"
-                    class="questionRange"><span>Unit 9</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="10"
-                    class="questionRange"><span>Unit 10</span></label>
+                        <h4>Question Range (Multiple Selection Possible)</h4>
+                        <p>RED Yumetan</p>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="1"
+                                        class="questionRange"><span>Unit 1</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="2"
+                                        class="questionRange"><span>Unit 2</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="3"
+                                        class="questionRange"><span>Unit 3</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="4"
+                                        class="questionRange"><span>Unit 4</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="5"
+                                        class="questionRange"><span>Unit 5</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="6"
+                                        class="questionRange"><span>Unit 6</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="7"
+                                        class="questionRange"><span>Unit 7</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="8"
+                                        class="questionRange"><span>Unit 8</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="9"
+                                        class="questionRange"><span>Unit 9</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="10"
+                                        class="questionRange"><span>Unit 10</span></label>
 
-            <p>BLUE Yumetan</p>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="11"
-                    class="questionRange"><span>Unit 1</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="12"
-                    class="questionRange"><span>Unit 2</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="13"
-                    class="questionRange"><span>Unit 3</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="14"
-                    class="questionRange"><span>Unit 4</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="15"
-                    class="questionRange"><span>Unit 5</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="16"
-                    class="questionRange"><span>Unit 6</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="17"
-                    class="questionRange"><span>Unit 7</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="18"
-                    class="questionRange"><span>Unit 8</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="19"
-                    class="questionRange"><span>Unit 9</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionRange[]" value="20"
-                    class="questionRange"><span>Unit 10</span></label>
+                        <p>BLUE Yumetan</p>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="11"
+                                        class="questionRange"><span>Unit 1</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="12"
+                                        class="questionRange"><span>Unit 2</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="13"
+                                        class="questionRange"><span>Unit 3</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="14"
+                                        class="questionRange"><span>Unit 4</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="15"
+                                        class="questionRange"><span>Unit 5</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="16"
+                                        class="questionRange"><span>Unit 6</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="17"
+                                        class="questionRange"><span>Unit 7</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="18"
+                                        class="questionRange"><span>Unit 8</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="19"
+                                        class="questionRange"><span>Unit 9</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionRange[]" value="20"
+                                        class="questionRange"><span>Unit 10</span></label>
 
-            <h4>Question Part of Speech (Multiple Selection Possible)</h4>
-            <label class="selectItems"><input type="checkbox" name="questionType[]" value="0" class="questionType"
-                    checked><span>Noun</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionType[]" value="1" class="questionType"
-                    checked><span>Verb</span></label>
-            <label class="selectItems"><input type="checkbox" name="questionType[]" value="2" class="questionType"
-                    checked><span>Adjective</span></label>
+                        <h4>Question Part of Speech (Multiple Selection Possible)</h4>
+                        <label class="selectItems"><input type="checkbox" name="questionType[]" value="0"
+                                        class="questionType" checked><span>Noun</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionType[]" value="1"
+                                        class="questionType" checked><span>Verb</span></label>
+                        <label class="selectItems"><input type="checkbox" name="questionType[]" value="2"
+                                        class="questionType" checked><span>Adjective</span></label>
 
-            <h4>Number of Questions (Default : 20 Questions)</h4>
-            <p>MAX : 100 Questions, MIN : 1 Question</p>
-            <input type="number" name="questionCount" min="1" max="100" value="20" inputmode="numeric"
-                class="input_number">
-            <p>*If the number of words entered in the question is greater than the number of corresponding words on
-                Yumetan, the number of words in the question is automatically adjusted to the number of corresponding
-                words.<br>
-                Even if the number of words you entered is less than the number of questions, it is not a malfunction or
-                an error.
-            </p>
+                        <h4>Number of Questions (Default : 20 Questions)</h4>
+                        <p>MAX : 100 Questions, MIN : 1 Question</p>
+                        <input type="number" name="questionCount" min="1" max="100" value="20" inputmode="numeric"
+                                class="input_number">
+                        <p>*If the number of words entered in the question is greater than the number of corresponding
+                                words on
+                                Yumetan, the number of words in the question is automatically adjusted to the number of
+                                corresponding
+                                words.<br>
+                                Even if the number of words you entered is less than the number of questions, it is not
+                                a malfunction or
+                                an error.
+                        </p>
 
-            <p><input type="submit" value="Start" class="button button_start" onclick="return checkBox1()"></p>
-        </form>
-    </div>
+                        <p><input type="submit" value="Start" class="button button_start" onclick="return checkBox1()">
+                        </p>
+                </form>
+        </div>
 </body>
 
 </html>
